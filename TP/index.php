@@ -11,14 +11,6 @@
 </head>
 <body>
     <div class ="container">
-        <div>
-            <?php
-                role();
-            ?>
-        </div>
-        <div>
-            <p>Veuillez choisir un rôle</p>
-        </div>
     </div>
 </body>
 </html>
