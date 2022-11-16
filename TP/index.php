@@ -11,9 +11,6 @@
 </head>
 <body>
     <div class ="container">
-        <p>
-            Bonjour à vous les terriens
-        </p>
     </div>
 </body>
 </html>
