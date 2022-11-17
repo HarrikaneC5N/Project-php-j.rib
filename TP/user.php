@@ -1,22 +1,14 @@
 <?php 
 require('connectionBdd.php');
-$query = $connection -> prepare('
-    SELECT
-    `firstName`,
-    `lastName`,
-    `address`,
-    `phone`
-    FROM
-    `users`
-    ORDER BY
-    `users`.`id` ASC'
+$query = ('
+    SELECT * FROM tp_jri_.users '
 );
-
-$query -> execute();
-$users = $query -> fetchAll();
+$stmt = $connection->prepare($query);
+$stmt -> execute();
+$users = $stmt -> fetchAll();
 
 foreach($users as $user){
-    echo $user['firstName'];
-    echo $user['lastName'];
-    echo $user['phone'];
+    echo $user['firstName']."<br>";
+    echo $user['lastName']."<br>";
+    echo $user['phone']."<br>";
 };
