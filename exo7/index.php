@@ -1,6 +1,6 @@
 <?php
 
-$roles = ["Admin", "Membre", "Gestionnaire", "Autre"];
+$roles = ["Admin", "Membre", "Gestionnaire"];
     function role(){
         if(isset($_POST['role'])){
             if($_POST['role']=='Admin'){
@@ -12,11 +12,8 @@ $roles = ["Admin", "Membre", "Gestionnaire", "Autre"];
             if($_POST['role']=='Gestionnaire'){
                 echo "<p> Vous êtes gestionnaire du site. </p>";
             }
-            if($_POST['role']=='Autre'){
-                echo "<p> Bienvenu invité </p>";
-            }
         }else{
-            echo "<p>Vous n'avez actuellement pas de rôle</p>";
+            echo "<p>Vous n'avez actuellement pas de rôle, veuillez en choisir un</p>";
         };
     }
 ?>
@@ -35,12 +32,8 @@ $roles = ["Admin", "Membre", "Gestionnaire", "Autre"];
                 role();
             ?>
         </div>
-        <div>
-            <p>Veuillez choisir un rôle</p>
-        </div>
         <form action="" method="post">
             <select name="role" id="role">
-                <option value="">Veuillez selectionner un rôle</option>
                 <?php foreach ($roles as $key => $role){ ?>
                 <option value="<?php echo $role; ?>"><?php echo $role; ?></option>
                 <?php }; ?>
