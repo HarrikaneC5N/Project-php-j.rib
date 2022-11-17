@@ -1,12 +1,12 @@
 <?php 
-    // function to get the average
+    // fonction pour obtenir une moyenne
     function bankAverage(){
     $storage = [122, 143, 45, 28];
     $takeOut = [12, 47, 60, 80];
-    // divide an array by himself to split it by the good number
+    // division du tableau par son nombre d'index pour obtenir une moyenne
     $averageStor =  array_sum($storage)/count($storage);
     $averageTakeOut =  array_sum($takeOut)/count($takeOut);
-    // display the resulsts
+    // affichage du résultat
     echo "$averageStor Est la moyenne des dépots sur le compte.<br>";
     echo "$averageTakeOut Est la moyenne des retraits sur le compte.<br>";
     };

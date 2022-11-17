@@ -1,6 +1,6 @@
 <?php 
     function hello(){
-        // variable with text, added "nl2br" fuction to use "\n"
+        // variable contenant du text dans la fonction nl2br permettant l'utilisation du \n
         $hiWlc= nl2br(" Bonjour, c'est moi.\n T'es le bien venu sur mon site");
         echo $hiWlc;
     };

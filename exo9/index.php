@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- creation objet et affichage avec le getter -->
     <?php 
         $book1 = new Book(1,"Sweet Home");
         $titre = $book1->getTitle();

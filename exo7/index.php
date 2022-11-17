@@ -1,5 +1,5 @@
 <?php
-
+// tableau aves les roles, changement du text en fonction du role
 $roles = ["Admin", "Membre", "Gestionnaire"];
     function role(){
         if(isset($_POST['role'])){
@@ -28,10 +28,12 @@ $roles = ["Admin", "Membre", "Gestionnaire"];
 <body>
     <div class ="container">
         <div>
+            <!-- appel fonction -->
             <?php
                 role();
             ?>
         </div>
+        <!-- boucle avec les options -->
         <form action="" method="post">
             <select name="role" id="role">
                 <?php foreach ($roles as $key => $role){ ?>

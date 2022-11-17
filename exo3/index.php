@@ -1,4 +1,5 @@
 <?php 
+// fonction pour calculer le nombre de ligne et le nombre d'image par ligne
     function imgPerLine($imgVar){
         $maxImgs = 3;
         $nmbOfLines = ceil($imgVar / $maxImgs);
@@ -17,6 +18,7 @@
 </head>
 <body>
     <div>
+        <!-- appel de la fonction -->
         <p>
             <?php 
             imgPerLine(8);

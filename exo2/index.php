@@ -7,6 +7,7 @@
     <title>Exo2</title>
 </head>
 <body>
+    <!-- affichage text et alt de l'image en php -->
     <div>
         <h1 class="helloWorld">
            <?php echo "Hello World"; ?>

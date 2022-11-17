@@ -1,6 +1,6 @@
 <?php
 
-
+// creation classe book et creation des getter / setter
 class Book
 {
     private $id;

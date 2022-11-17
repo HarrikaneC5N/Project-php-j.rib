@@ -1,7 +1,10 @@
 <?php 
+// variable contenant du text dans la fonction nl2br permettant l'utilisation du \n
     $hiWlc= nl2br(" Bonjour, c'est moi. \n T'es le bien venu sur mon site");
     $name = "Nicklaus";
     $toFind = "moi";
+
+    // trouver et remplacer la variable recherchée dans les textes
     function helloYou($hiWlc, $toFind, $name){
         if(str_contains($hiWlc, $toFind)){
             $res = str_replace($toFind,$name, $hiWlc);
@@ -24,6 +27,7 @@
 <body>
     <div>
         <p>
+            <!-- appelle de la fonction -->
             <?php
                 helloYou($hiWlc, $toFind, $name);
             ?>
