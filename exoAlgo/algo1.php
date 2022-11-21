@@ -3,30 +3,22 @@ $notes = [15,12,19,8,9,-5,2,1];
 $smaller = 21;
 $notesR = [false,false,false,false,false,false,false,false];
 for($i = 0; $i < sizeof($notes); $i++){
-    if($notesR[$i] != true){
-        $notesR[$i] = true;
-    }
-
+    // if($notesR[$i] != true){
+    //     $notesR[$i] = true;
+    // }
 
     if($notes[$i] <= $smaller){
         $smaller = $notes[$i];
         print_r($smaller);
-        echo "<br>";
+        echo " est le plus petit du tableau <br>";
     }
-    else{
-        print_r($smaller)."<br>";
-        echo "<br>";
-    }
+
 }
 
-?>
-<?php
 // $items = array();
 // foreach($group_membership as $username) {
 //  $items[] = $username;
 // }
-
-
 
 // $notes = [15,12,19,8,9,-5,2,1];
 // $smaller = 0;
