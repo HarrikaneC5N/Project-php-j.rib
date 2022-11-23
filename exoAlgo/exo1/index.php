@@ -1,4 +1,5 @@
 <?php 
+//creation tableau
 $notes = [15,12,19,8,9,-5,2,1];
 $smaller = $notes[0];
 
