@@ -3,6 +3,8 @@
 session_start();
 
 $word = $_SESSION['word'] ='Autruche';
+// $arrayToFind [] = $_SESSION['toFind'] = $toFind;
+$toFind[] = [];
 
 if(isset($_POST['letter'])){
     $letter = $_SESSION['letter'] = $_POST['letter'];
@@ -10,25 +12,17 @@ if(isset($_POST['letter'])){
     $try = $_SESSION['try'] = 10;
     
     echo "Le mot : ";
+    // initialisation du tableau
     for($i = 0; $i < strlen($word); $i++){
         $wordArray = $word[$i];
-        echo "_ "; 
+        $toFind = "_ ";
     }
     
-
-
-
-
-
-
-
-    }
-
-
-elseif(!isset($_POST)){
+}
+elseif(!isset($_POST['letter'])){
     echo "yo";
 }
-
+var_dump($_SESSION);
 
 
 
@@ -56,6 +50,7 @@ elseif(!isset($_POST)){
 
 <form action="" method="post" >
         <label for="letter"> Essayez une lettre : </label>
-        <input type="text" name="letter" id="letter" required>
+        <input type="text" name="letter" id="letter" minlength="1" maxlength="2" required>
+        <input name="letter" type="text"  minlength="1" maxlength="2" required>
         <input type="submit" value=" verifier ">
 </form>
