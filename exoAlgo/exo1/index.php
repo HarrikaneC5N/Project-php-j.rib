@@ -11,6 +11,7 @@ function minNote($notes,$smaller){
         }
     }
 }
+
 minNote($notes, $smaller);
 
 $higher = $notes[0];
