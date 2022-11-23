@@ -1,11 +1,10 @@
 <?php 
+// Création de mes tableaux pour l'encryptage de mes données
 $alphaUp =range('A', 'Z');
 $alphaLow =range('a','z');
 
 $texts = $_POST['text'] ;
-
 $encrypt =[];
-
 $finalWord =[];
 
 for($i=0; $i<strlen($texts);$i++){
@@ -13,17 +12,17 @@ for($i=0; $i<strlen($texts);$i++){
     $encrypt [$i] = $texts[$i];
 
 }
-
-// foreach pour désassembler ma variable $encrypt
+// foreach pour recuperer mes lettres dans ma variable
 foreach($encrypt as $encArray){
-    echo "<br> lettre ".$encArray;
-    echo "<br>";
-    // foreach($alphaUp as $alfUp){
-    //     if($encArray === $alfUp){
-    //         echo "<br>";
-    //         $encrypted = $alphaUp+2;
-    //     }
-    // }
+    // je compare ma lettre au tableau en majuscule puis je l'encrypte et la stock dans une variable
+    foreach($alphaUp as $key => $alfUp){
+        if($encArray === $alfUp){
+            echo "<br>";
+            $encrypted = $key+2;
+            $finalWord[$key] = $alphaUp[$encrypted%26];
+        }
+    }
+    // je compare ma lettre au tableau en minuscule puis je l'encrypte et la stock dans une variable
     foreach($alphaLow as $key => $alfLow){
         if($encArray === $alfLow){
             echo "<br>";
@@ -31,8 +30,7 @@ foreach($encrypt as $encArray){
             $finalWord[$key] = $alphaLow[$encrypted%26]; 
         }
     }
-    // $encrypted = $alphaLow+2;
-    // echo " encrypted $encrypted encrypted ";
-    // echo "<br>".$encrypted."<br>";
 }
-echo " Le mot encrypté ".implode($finalWord);
+echo " Le mot encrypté : ".implode($finalWord)."<br>";
+// Affichage mot décrypté
+echo " Le mot décrypté : ".$texts."<br>";
