@@ -24,28 +24,6 @@ elseif(!isset($_POST['letter'])){
 }
 var_dump($_SESSION);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
 
 <form action="" method="post" >
