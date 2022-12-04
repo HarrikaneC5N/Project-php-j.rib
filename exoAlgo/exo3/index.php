@@ -16,7 +16,7 @@ if(isset($_POST['letter'])){
     foreach($word as $wordLetter){
         var_dump($wordLetter);
     }
-    if($_POST['letter'] == )
+   // if($_POST['letter'] == )
 
         for($i = 0; $i < strlen($word); $i++){
             $wordArray = $word[$i];
