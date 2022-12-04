@@ -1,4 +1,34 @@
-
-.helloWorld{
-    color: blue;
+body{
+    background-color: antiquewhite;
 }
+
+.cards3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 250px;
+}
+
+.teacher{
+    width: 250px;
+    border: black solid 1px;
+}
+
+ img{
+    height: 250px;
+     width: 100%;
+  }
+
+ .btn-header{
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin-bottom: 50px;
+ }
+ a{
+     text-decoration: none;
+     color: black;
+     font-weight: bolder;
+ }
+
